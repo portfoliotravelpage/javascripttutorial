@@ -1,4 +1,3 @@
-
 var mainList = {
 	budget:  firmaBudget,
 	nameofshop: '',
@@ -7,12 +6,18 @@ var mainList = {
 	open: true
 }
 
+function shopGoods (count) {
+	for (let i = 0 ; i <= count ; i++){
+		var save = prompt('Was möchtest du in deinem Shop verkaufen?');
+		if (mainList.shopGoods[i] == "") {
+			mainList.shopGoods[i] = save;
+		}
+	}
+}
 
-mainList.shopGoods[0] = prompt('Was möchtest du in deinem Shop verkaufen? Artikel: 1');
-mainList.shopGoods[1] = prompt('Was möchtest du in deinem Shop verkaufen? Artikel: 2');
-mainList.shopGoods[2] = prompt('Was möchtest du in deinem Shop verkaufen? Artikel: 3');
-// var mainlist.firmaName = prompt('What is the name of your shop?');
-// var mainlist.firmaBudget = +prompt('How big is your Budget?');
+shopGoods(3);
+
+
 mainList.budget = +prompt('Wie groß ist dein Budget?');
 mainList.nameofshop = prompt('Wie heißt dein Shop?');
 
